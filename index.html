@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="shortcut icon" href="img/blacksquare.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>BroBakers</title>
+    </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a href="#main" class="header__logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="#menu" class="header__link">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#bread" class="header__link">Bread</a>
+                        </li>
+                        <li>
+                            <a href="#bakery" class="header__link">Bakery</a>
+                        </li>
+                        <li>
+                            <a href="#locations" class="header__link">Locations</a>
+                        </li>
+                    </ul>
+
+                    <div class="social__header">
+                        <a href="https://www.facebook.com/" class="social" id="facebook" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="social" id="twitter" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social" id="instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="banner" id="main">
+        <div class="container">
+            <div class="banner__body">
+                <h1>Tasty. Hot. Bread.</h1>
+                <p class="subtitle__h1">Here is the best bread born. Really.</p>
+                <div class="order__button">
+                    <button class="order" onclick="openOrderPopup()">Order Now</button>
+                </div>
+                <div class="popup">
+                    <div class="form__popup" id="order__popup">
+                        <iframe name="hiddenConfirm" id="hiddenConfirm" style="display: none;" onload="if(submitted){window.location='submission.html'}"></iframe>
+                        <form action="https://docs.google.com/forms/u/1/d/16d40BaPCASMIEFX5g-4VajebBG6ISPPpCrn2QENCRwg/formResponse" method="post" target="hiddenConfirm" onsubmit="submitted = true" class="form__container">
+                            <h2>Order now</h2>
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="entry.1683149628">
+                            </div>
+                            <div>
+                                <label for="phone">Phone number *</label>
+                                <input type="tel" id="phone" name="entry.742769227" required>
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea name="entry.2123252079" id="message" width="100%" height="100%"></textarea>
+                            </div>
+                            <div>
+                            <button type="submit" class="btn">Submit</button>
+                            </div>
+                            <button type="button" class="btn__cancel" onclick="closeOrderPopup()">&times;</button>    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="services">
+        <div class="container">
+            <div class="services__body">
+                <div class="section__title">
+                    <img src="img/bread__icon.svg" alt="">
+                    <h2>Services</h2>
+                    <hr class="hr__black">
+                </div>
+                <div class="sevices__types">
+                    <div class="s__type">
+                        <img src="img/s1.png" alt="">
+                        <p class="title">Breakfast</p>
+                        <p class="description">We offer a variety of assorted pastries and made-to-order breads, cakes and pies.</p>
+                    </div>
+                    <div class="s__type">
+                        <img src="img/s2.png" alt="">
+                        <p class="title">Toast</p>
+                        <p class="description">Toast is a form of bread that has been browned by exposure to radiant heat.</p>
+                    </div>
+                    <div class="s__type">
+                        <img src="img/s3.png" alt="">
+                        <p class="title">French Recipes</p>
+                        <p class="description">We pride ourselves in bringing you the traditional taste of European homemade breads, pastries and cakes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="menu__body">
+                <div class="section__title">
+                    <img src="img/bread__icon__white.svg" alt="">
+                    <h2>Menu</h2>
+                    <hr class="hr__white">
+                </div>
+                <div class="menu__list">
+                    <div class="menu__part">
+                        <div class="menu__item">
+                            <p class="name">White Toast</p>
+                            <p class="price">$4.00</p>
+                        </div>
+                        <span class="underline"></span>
+                        <div class="menu__item">
+                            <p class="name">Whole Wheat</p>
+                            <p class="price">$5.00</p>
+                        </div>
+                        <span class="underline"></span>
+                        <div class="menu__item">
+                            <p class="name">Multigrain</p>
+                            <p class="price">$5.50</p>
+                        </div>
+                        <span class="underline"></span>
+                        <div class="menu__item">
+                            <p class="name">Sourdough Olive</p>
+                            <p class="price">$4.50</p>
+                        </div>
+                    </div>
+
+                    <div class="menu__part">
+                        <div class="menu__item">
+                            <p class="name">French Baguette</p>
+                            <p class="price">$3.50</p>
+                        </div>
+                        <span class="underline"></span>
+                        <div class="menu__item">
+                            <p class="name">Ciabatta</p>
+                            <p class="price">$4.50</p>
+                        </div>
+                        <span class="underline"></span>
+                        <div class="menu__item">
+                            <p class="name">Brioche</p>
+                            <p class="price">$5.50</p>
+                        </div>
+                        <span class="underline"></span>
+                        <div class="menu__item">
+                            <p class="name">Croissant</p>
+                            <p class="price">$2.50</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bread" id="bread">
+        <div class="container">
+            <div class="bread__body">
+                <div class="section__title">
+                    <img src="img/bread__icon.svg" alt="">
+                    <h2>Bread</h2>
+                    <hr class="hr__black">
+                </div>
+                <div class="bread__types">
+                    <div class="b__type">
+                        <a href="#bread__popup1" class="bread__popup__button">
+                            <img src="img/b1.png" alt="">
+                        </a>
+                        <p class="bread__title">Baguette</p>
+                        <p class="bread__description">Thin elongated loaf, made of water, flour, yeast, and salt, instantly recognizable by slits cut in top surface before baking to allow gas expansion.</p>
+                        <div class="order__bread__button">
+                            <button class="order__bread" onclick="openOrderPopup()">Order Now</button>
+                        </div>
+                        <div id="bread__popup1" class="overlay">
+                            <div class="bread__popup">
+                                <p>1 / 1</p>
+                                <a class="close" href="#close">&times;</a>
+                                <div class="bread__popup__img">
+                                    <div id="b1__popup"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b__type">
+                        <a href="#bread__popup2" class="bread__popup__button">
+                            <img src="img/b2.png" alt="">
+                        </a>
+                        <p class="bread__title">White</p>
+                        <p class="bread__description">Made from wheat flour from which the bran and the germ have been removed through a process known as milling.</p>
+                        <div class="order__bread__button">
+                            <button class="order__bread" onclick="openOrderPopup()">Order Now</button>
+                        </div>
+                        <div id="bread__popup2" class="overlay">
+                            <div class="bread__popup">
+                                <p>1 / 1</p>
+                                <a class="close" href="#close">&times;</a>
+                                <div class="bread__popup__img">
+                                    <div id="b2__popup"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b__type">
+                        <a href="#bread__popup3" class="bread__popup__button">
+                            <img src="img/b3.png" alt="">
+                        </a>
+                        <p class="bread__title">Sourdough</p>
+                        <p class="bread__description">A bread product made by a long fermentation of dough using naturally occurring lactobacilli and yeasts.</p>
+                        <div class="order__bread__button">
+                            <button class="order__bread" onclick="openOrderPopup()">Order Now</button>
+                        </div>
+                        <div id="bread__popup3" class="overlay">
+                            <div class="bread__popup">
+                                <p>1 / 1</p>
+                                <a class="close" href="#close">&times;</a>
+                                <div class="bread__popup__img">
+                                    <div id="b3__popup"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bakery" id="bakery">
+        <div class="container">
+            <div class="bakery__body">
+                <div class="bakery__description">
+                    <div class="section__title">
+                        <img src="img/bread__icon.svg" alt="">
+                        <h2>Bakery</h2>
+                        <hr class="hr__black">
+                    </div>
+                    
+                        <p class="bakery__text">Dad was a baker, and we lived above the bakery, so I was always popping down to have an apple pie or a doughnut or a custard or gypsy tart: I had a very sweet tooth, and I think that that was what got me into doing what I do now.</p>
+                    <div class="signature">
+                        <img src="img/bakery__signature.png" alt="">
+                    </div>
+                </div>
+                <div class="bakery__image">
+                    <img src="img/bakery__img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials__body">
+                <div class="section__title">
+                    <img src="img/bread__icon.svg" alt="">
+                    <h2>Testimonials</h2>
+                    <hr class="hr__black">
+                </div>
+                <div class="testimonials__types">
+                    <div class="testimonials__item">
+                        <div class="testimonials__card">
+                            <img src="img/quote.svg" alt="">
+                            <p class="text">The cake you made for our wedding was even more beautiful than we imagined, and needless to say it tasted excellent too. Thank you for making our dream come true.</p>
+                            <div class="testimonials__item__name">
+                                <img src="img/vanessa.png" alt="">
+                                <p>Vanessa Raynolds</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials__item">
+                        <div class="testimonials__card">
+                            <img src="img/quote.svg" alt="">
+                            <p class="text">No better way to start my day than to pick up a muffin and danish on my way to work. I love this place and the staff is super friendly!</p>
+                            <div class="testimonials__item__name">
+                                <img src="img/mike.png" alt="">
+                                <p>Mike Peterson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="locations" id="locations">
+        <div class="container">
+            <div class="locations__body">
+                <div class="section__title">
+                    <img src="img/bread__icon__white.svg" alt="">
+                    <h2>Locations</h2>
+                    <hr class="hr__white">
+                </div>
+                <div class="locations__types">
+                    <div class="location__item">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.874320161529!2d-117.15809218477666!3d32.71596719440294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954a755559491%3A0x86dd23d7d9295f9d!2zOTQwIEJyb2Fkd2F5LCBTYW4gRGllZ28sIENBIDkyMTAxLCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2suk!4v1666519987818!5m2!1suk!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <p class="location__item__title">San Diego</p>
+                        <p class="location__item__subtitle">940 Broadway, San Diego, CA 92101</p>
+                    </div>
+                    <div class="location__item">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.0211087164803!2d-118.25713788474872!3d34.04332962564706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7cbb153cdcb%3A0xa2a2054a00be4622!2zOTQwIFMgQnJvYWR3YXksIExvcyBBbmdlbGVzLCBDQSA5MDAxNSwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2suk!4v1666520165752!5m2!1suk!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <p class="location__item__title">Los Angeles</p>
+                        <p class="location__item__subtitle">940 Broadway, Los Angeles, CA 90211</p>
+                    </div>
+                    <div class="location__item">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.6923441909075!2d-122.41488608466301!3d37.797249218639124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580f207e5263d%3A0xcb1f6743b1c5e4c4!2zOTQwIEJyb2Fkd2F5LCBTYW4gRnJhbmNpc2NvLCBDQSA5NDEzMywg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2suk!4v1666520207268!5m2!1suk!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <p class="location__item__title">San Francisco</p>
+                        <p class="location__item__subtitle">940 Broadway, San Francisco, CA 94111</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__body">
+                <a href="#main" class="footer__logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+
+                <nav class="footer__menu">
+                    <ul class="footer__list">
+                        <li>
+                            <a href="#menu" class="footer__link">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#bread" class="footer__link">Bread</a>
+                        </li>
+                        <li>
+                            <a href="#bakery" class="footer__link">Bakery</a>
+                        </li>
+                        <li>
+                            <a href="#locations" class="footer__link">Locations</a>
+                        </li>
+                    </ul>
+
+                    <div class="social__footer">
+                        <a href="https://www.facebook.com/" class="social" id="facebook" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="social" id="twitter" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social" id="instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/257a877408.js" crossorigin="anonymous"></script>
+</body>
+</html>
